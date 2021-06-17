@@ -1,5 +1,7 @@
 // Components don't need to be separeted into individual files
 // Here we have a smaller component that helps compose the AnswersItem below
+
+//Takes in a list and will map over that list and creare an li with either a answer value from answerSet1 or answerSetTwo
 function ItemsList({ list }) {
   return (
     <ul>
@@ -15,14 +17,14 @@ function ItemsList({ list }) {
 }
 
 // These answers objects keys match the values attributes from the checkboxes
-const answersSet = {
+export const answersSet = {
   colour: "It's yellow!",
   sound: "It squeaks!",
   logo: "It has a logo!",
   size: "Its big!"
 };
 
-const answersSetTwo = {
+export const answersSetTwo = {
   swimming: "Swimming",
   bathing: "Bathing",
   chatting: "Chatting",
@@ -33,6 +35,7 @@ const answersSetTwo = {
 export default function AnswersItem({
   // Feel free to change this props names to what suits you best
   // Rememeber here we're destructuring answerItem, which is the prop name that we've passed
+
   answerItem: {
     username,
     email,
@@ -44,7 +47,8 @@ export default function AnswersItem({
     bestFeatures,
     worstFeatures
   }
-}) {
+})
+{
   return (
     <li>
       <article className="answer">

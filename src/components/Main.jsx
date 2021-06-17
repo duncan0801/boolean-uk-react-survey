@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import Form from "./Form";
+
 import AnswersList from "./AnswersList";
 
 export default function Main() {
@@ -11,7 +13,9 @@ export default function Main() {
         <h2>Answers list</h2>
         {/* Use the AnswersList component here */}
       </section>
-      <section className="main__form">There's a form missing here!</section>
+      <section className="main__form">
+      <Form />
+      </section>
     </main>
   );
 }
