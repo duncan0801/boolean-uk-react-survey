@@ -1,10 +1,11 @@
-import {answersSet} from "./AnswersItem"
-import CheckboxesList1Item from "./CheckboxesList1Item"
+import {answersSetTwo} from "./AnswersItem"
+import CheckboxesList2Item from "./CheckboxesList2Item"
 
-function CheckboxesList1() {
+function CheckboxesList2() {
 
-    const keys = Object.keys(answersSet)
-    const values = Object.values(answersSet)
+    
+    const keys = Object.keys(answersSetTwo)
+    const values = Object.values(answersSetTwo)
 
     return (
         <ul>
@@ -12,7 +13,7 @@ function CheckboxesList1() {
                 console.log(keys,
                     values)
                 return (
-                    <CheckboxesList1Item
+                    <CheckboxesList2Item 
                     key={i}
                     keys={keys} 
                     value={value}
@@ -20,7 +21,6 @@ function CheckboxesList1() {
                 )
             })}
         </ul>
-        
     )
 }
-export default CheckboxesList1
+export default CheckboxesList2

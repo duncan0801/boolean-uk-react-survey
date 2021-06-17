@@ -1,7 +1,12 @@
 import CheckboxesList1 from "./CheckboxesList1"
+import CheckboxesList2 from "./CheckboxesList2"
+import RadioListItem from "./RadioListItem"
 
 
 function Form() {
+
+    const ratingScale = [1, 2, 3, 4]
+    
     return (
         <form class="form">
             <h2>Tell us what you think about your rubber duck!</h2>
@@ -15,19 +20,25 @@ function Form() {
             </div>
             <div class="form__group radio">
                 <h3>How do you rate your rubber duck consistency?</h3>
-                {/* <!-- radio buttons go here --> */}
+                {ratingScale.map((numRating) => {
+                    return <RadioListItem key={numRating} numRating={numRating}/>
+                })}
             </div>
             <div class="form__group radio">
                 <h3>How do you rate your rubber duck colour?</h3>
-                {/* <!-- Radio inputs go here --> */}
+                {ratingScale.map((numRating) => {
+                    return <RadioListItem key={numRating} numRating={numRating}/>
+                })}
             </div>
             <div class="form__group radio">
                 <h3>How do you rate your rubber duck logo?</h3>
-                {/* <!-- radio inputs go here --> */}
+                {ratingScale.map((numRating) => {
+                    return <RadioListItem key={numRating} numRating={numRating}/>
+                })}
             </div>
             <div class="form__group">
                 <h3>How do you like to spend time with your rubber duck</h3>
-                {/* <!-- checkboxes go here --> */}
+                <CheckboxesList2/>
             </div>
             <label
                 >What else have you got to say about your rubber duck?<textarea
