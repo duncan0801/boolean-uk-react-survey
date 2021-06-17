@@ -1,8 +1,8 @@
-function CheckboxesList1Item({keys, value, i}) {
+function CheckboxesList1Item({keys, value, i, type}) {
     return (
         <li>
             <label>
-                <input name="bestFeatures" type="checkbox" value={keys[i]} />
+                <input name={`${type}Features`} type="checkbox" value={keys[i]} />
                 {value}
             </label>
         </li>

@@ -12,11 +12,11 @@ function Form() {
             <h2>Tell us what you think about your rubber duck!</h2>
             <div class="form__group">
                 <h3>What would you say that are the best features of your rubber duck?</h3>
-                <CheckboxesList1/>
+                <CheckboxesList1 type={"best"}/>
             </div>
             <div class="form__group">
                 <h3>What would you say that are the worst bits of your rubber duck?</h3>
-                <CheckboxesList1/>
+                <CheckboxesList1 type={"worst"}/>
             </div>
             <div class="form__group radio">
                 <h3>How do you rate your rubber duck consistency?</h3>

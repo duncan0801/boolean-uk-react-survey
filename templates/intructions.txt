@@ -13,3 +13,7 @@ Add an edit button to each of the answers cards. Clicking on this button should 
 
 Challenge 2
 Add a json-server to your app, and persist all the answers from the form. You still should be able to edit the form and save the new answers too. Also, add a delete button to each of the answers that will delete them from the server too.
+
+
+TOO:
+1. Chage the name of best ad worst features

@@ -1,7 +1,7 @@
 import {answersSet} from "./AnswersItem"
 import CheckboxesList1Item from "./CheckboxesList1Item"
 
-function CheckboxesList1() {
+function CheckboxesList1({type}) {
 
     const keys = Object.keys(answersSet)
     const values = Object.values(answersSet)
@@ -13,6 +13,7 @@ function CheckboxesList1() {
                     values)
                 return (
                     <CheckboxesList1Item
+                    type={type}
                     key={i}
                     keys={keys} 
                     value={value}
