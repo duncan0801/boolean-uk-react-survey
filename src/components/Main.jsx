@@ -37,17 +37,13 @@ export default function Main() {
   function handleFormSubmission(event) {
     event.preventDefault()
 
-    
 
     const bestFeaturesStrings = [...event.target.bestFeatures].filter(input => input.checked).map(checkedInput => checkedInput.value)
 
-    
-
     const worstFeaturesStrings = [...event.target.worstFeatures].filter(input => input.checked).map(checkedInput => checkedInput.value)
 
-    
-
     const timeSpentStrings = [...event.target.timeSpent].filter(input => input.checked).map(checkedInput => checkedInput.value)
+
 
     const data = {
       username: event.target.username.value,
@@ -60,16 +56,55 @@ export default function Main() {
       bestFeatures: bestFeaturesStrings,
       worstFeatures: worstFeaturesStrings
     }
-    setFormData(data)
-    console.log("formData", formData)
 
-    console.log("data:", data)// ? EMPTY OBJECT
-    
+
+
+    setFormData(data)
     addFormDataToResponses(data)
-    console.log("responses:", responses)
     event.target.reset()
 
   }
+
+  function handleChangeWithString(event) {
+    setFormData({...formData, [event.target.name] : event.target.value})
+    console.log("changed!")
+  }
+  function handleChangeWithArray(event) {
+
+    setFormData({...formData, [event.target.name]:[...event.target[event.target.name]].filter(input => input.checked).map(checkedInput => checkedInput.value)})
+  }
+
+    //1. We need to change setFormData to whatever it was before plus the chnage from the input 
+    /*
+    Names:
+    username,
+    email,
+    logo,
+    colour,
+    consistency,
+    timeSpent,
+    review,
+    bestFeatures,
+    worstFeatures
+    */
+
+    /**
+     1. If the name is === ""
+          CAn do the easy adding 
+    2. if name === bestFeatures
+          const bestFeaturesStrings = [...event.target.bestFeatures].filter(input => input.checked).map(checkedInput => checkedInput.value)
+
+          setFormData({...formData}, name: bestFeaturesStrings)
+    3. if name === worstFeatures
+          const worstFeaturesStrings = [...event.target.worstFeatures].filter(input => input.checked).map(checkedInput => checkedInput.value)
+
+          setFormData({...formData}, name: worstFeaturesStrings)
+    4. if name === timeSpent
+          const timeSpentStrings = [...event.target.timeSpent].filter(input => input.checked).map(checkedInput => checkedInput.value)
+
+          setFormData({...formData}, name: timeSpentStrings)
+     */
+
 
   function addFormDataToResponses(formData) {
     setResponses([...responses, formData])
@@ -85,7 +120,10 @@ export default function Main() {
         {/* Use the AnswersList component here */}
       </section>
       <section className="main__form">
-      <Form handleFormSubmission={handleFormSubmission}
+      <Form 
+      handleFormSubmission={handleFormSubmission}
+      handleChangeWithString={handleChangeWithString}
+      handleChangeWithArray={handleChangeWithArray}
         setFormData={setFormData} />
       </section>
     </main>

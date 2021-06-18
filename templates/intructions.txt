@@ -16,7 +16,6 @@ Add a json-server to your app, and persist all the answers from the form. You st
 
 
 TOO:
-- Sort out anwers list sections
-- link the state with the inputs via onChange
-- save the form to the state via onSubmit and conect with answers list
-- clear the form afterwards
+- Get radio button values into state
+- Get checkbox values into state
+- Double bind 

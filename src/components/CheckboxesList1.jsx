@@ -1,7 +1,7 @@
 import {answersSet} from "./AnswersItem"
 import CheckboxesList1Item from "./CheckboxesList1Item"
 
-function CheckboxesList1({type}) {
+function CheckboxesList1({type, handleChangeWithArray}) {
 
     const keys = Object.keys(answersSet)
     const values = Object.values(answersSet)
@@ -11,6 +11,7 @@ function CheckboxesList1({type}) {
             {values.map((value, i) => {
                 return (
                     <CheckboxesList1Item
+                    handleChangeWithArray={handleChangeWithArray}
                     type={type}
                     key={i}
                     keys={keys} 
