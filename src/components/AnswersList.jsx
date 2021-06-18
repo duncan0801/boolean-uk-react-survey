@@ -1,10 +1,10 @@
 import AnswersItem from "./AnswersItem";
 
-export default function AnswersList({ answersList }) {
+export default function AnswersList({ responses }) {
   return (
     <ul>
-      {answersList.map((answerItem, i) => (
-        <AnswersItem answerItem={answerItem} key={i} />
+      {responses.map((response, i) => (
+        <AnswersItem response={response} key={i} />
       ))}
     </ul>
   );

@@ -3,12 +3,12 @@ import CheckboxesList2 from "./CheckboxesList2"
 import RadioListItem from "./RadioListItem"
 
 
-function Form() {
+function Form({handleFormSubmission, setFormData}) {
 
-    const ratingScale = [1, 2, 3, 4]
+    const ratingScale = ["1", "2", "3", "4"]
     
     return (
-        <form className="form">
+        <form className="form" onSubmit={handleFormSubmission}>
             <h2>Tell us what you think about your rubber duck!</h2>
             <div className="form__group">
                 <h3>What would you say that are the best features of your rubber duck?</h3>
@@ -45,18 +45,18 @@ function Form() {
                 name="review"
                 cols="30"
                 rows="10"
-                ></textarea></label
-            ><label
+                ></textarea></label>
+                <label
                 >Put your name here (if you feel like it):<input
                 type="text"
                 name="username"
-                value="" /></label
-            ><label
+                /></label>
+                <label
                 >Leave us your email pretty please??<input
                 type="email"
                 name="email"
-                value="" /></label
-            ><input className="form__submit" type="submit" value="Submit Survey!" />
+                /></label>
+                <input className="form__submit" type="submit" value="Submit Survey!" />
         </form>
     )
 }

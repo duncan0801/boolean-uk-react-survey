@@ -36,7 +36,7 @@ export default function AnswersItem({
   // Feel free to change this props names to what suits you best
   // Rememeber here we're destructuring answerItem, which is the prop name that we've passed
 
-  answerItem: {
+  response: {
     username,
     email,
     logo,
@@ -49,7 +49,6 @@ export default function AnswersItem({
   }
 })
 {
-  console.log(timeSpent, bestFeatures)
   return (
     <li>
       <article className="answer">

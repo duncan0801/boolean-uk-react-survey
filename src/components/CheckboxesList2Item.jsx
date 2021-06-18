@@ -2,7 +2,7 @@ function CheckboxesList2Item({keys, value, i}) {
     return (
         <li>
             <label>
-                <input name="bestFeatures" type="checkbox" value={keys[i]} />
+                <input name="timeSpent" type="checkbox" value={keys[i]} />
                 {value}
             </label>
         </li>
