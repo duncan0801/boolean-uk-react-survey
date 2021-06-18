@@ -10,8 +10,7 @@ function CheckboxesList2() {
     return (
         <ul>
             {values.map((value, i) => {
-                console.log(keys,
-                    values)
+        
                 return (
                     <CheckboxesList2Item 
                     key={i}

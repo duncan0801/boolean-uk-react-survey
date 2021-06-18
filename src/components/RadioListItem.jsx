@@ -1,8 +1,8 @@
-function RadioListItem({numRating}) {
+function RadioListItem({numRating, content}) {
     return (
         <li>
-            <input id={`consistency${numRating}`} type="radio" name="consistency" value={`${numRating}`} /><label
-            for={`consistency${numRating}`}
+            <input id={`${content}${numRating}`} type="radio" name={content} value={`${numRating}`} /><label
+            htmlFor={`${content}${numRating}`}
             >{numRating}</label>
         </li>
     )

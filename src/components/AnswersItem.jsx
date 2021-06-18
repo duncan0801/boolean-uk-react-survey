@@ -1,4 +1,3 @@
-import { useState } from "react"
 // Components don't need to be separeted into individual files
 // Here we have a smaller component that helps compose the AnswersItem below
 
@@ -50,6 +49,7 @@ export default function AnswersItem({
   }
 })
 {
+  console.log(timeSpent, bestFeatures)
   return (
     <li>
       <article className="answer">

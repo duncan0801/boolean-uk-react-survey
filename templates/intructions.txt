@@ -16,4 +16,7 @@ Add a json-server to your app, and persist all the answers from the form. You st
 
 
 TOO:
-1. Chage the name of best ad worst features
+- Sort out anwers list sections
+- link the state with the inputs via onChange
+- save the form to the state via onSubmit and conect with answers list
+- clear the form afterwards

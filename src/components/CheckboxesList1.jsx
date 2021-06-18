@@ -9,8 +9,6 @@ function CheckboxesList1({type}) {
     return (
         <ul>
             {values.map((value, i) => {
-                console.log(keys,
-                    values)
                 return (
                     <CheckboxesList1Item
                     type={type}
